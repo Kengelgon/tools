@@ -1,0 +1,19 @@
+### Github SSH keygen ###
+# ssh-keygen -t ed25519 -C "your_email@example.com"
+ssh-keygen -t ed25519 -C "kristianengel@gmail.com"
+
+### New Env Setup ###
+
+Visual Studio Code
+Windows Subsystem for Linux
+
+# Prefered install order
+ZSH
+oh-my-zsh
+powerlevel10k
+
+brew
+curl
+wget
+
+pyenv
