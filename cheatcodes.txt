@@ -1,6 +1,5 @@
 ### Github SSH keygen ###
 # ssh-keygen -t ed25519 -C "your_email@example.com"
-ssh-keygen -t ed25519 -C "kristianengel@gmail.com"
 
 ### New Env Setup ###
 
