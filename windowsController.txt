@@ -1,0 +1,43 @@
+### Register-ScheduledJob ps1 ###
+# Help #
+Register-ScheduledJob
+        [-FilePath] <String>
+        [-Name] <String>
+        [-Trigger <ScheduledJobTrigger[]>]
+        [-InitializationScript <ScriptBlock>]
+        [-RunAs32]
+        [-Credential <PSCredential>]
+        [-Authentication <AuthenticationMechanism>]
+        [-ScheduledJobOption <ScheduledJobOptions>]
+        [-ArgumentList <Object[]>]
+        [-MaxResultCount <Int32>]
+        [-RunNow]
+        [-RunEvery <TimeSpan>]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
+#
+#
+#
+# Create New Job Trigger #
+#
+New-JobTrigger
+   [-RandomDelay <TimeSpan>]
+   [-AtStartup]
+   [<CommonParameters>]
+
+# Register-ScheduledJob #
+# 
+Register-ScheduledJob
+	[-Trigger <ScheduledJobTrigger[]>]
+	[-FilePath <String>]
+	[-Name <String>]
+#
+#
+#
+# Trigger Job on Startup #
+$trigger = New-JobTrigger -AtStartup -RandomDelay 00:00:15
+Register-ScheduledJob
+        -Trigger $trigger
+        -FilePath C:\route_ssh_to_wsl.ps1
+        -Name RouteSSHtoWSL
