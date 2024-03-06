@@ -1,6 +1,5 @@
 ### Github SSH keygen ###
 # ssh-keygen -t ed25519 -C "your_email@example.com"
-ssh-keygen -t ed25519 -C "kristianengel@gmail.com"
 
 ### Standard dependencies that may not be installed ###
 sudo apt-get install 
@@ -12,6 +11,13 @@ sudo apt-get install
 	libreadline-dev 
 	libsqlite3-dev 
 	liblzma-dev
+
+### Create 'symlink' from windows filesystem to wsl filesystem ###
+# Admin powershell:
+New-Item 
+	-ItemType SymbolicLink 
+	-Path "windows-path\to\symlink" 
+	-Target "\\wsl$\Ubuntu\home\yourusername\path\to\target-thing"
 
 ### GIT ###
 git --rebase --help
